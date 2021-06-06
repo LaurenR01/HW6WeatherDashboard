@@ -1,0 +1,35 @@
+body{
+    background-color: aliceblue;
+}
+h1{
+    text-align: center;
+}
+
+#jumbotron{
+    padding: 0px;
+    margin-bottom: 15px;
+    background-color:dodgerblue;
+    color: white;
+}
+.input-panel{
+    background-color:navy;
+    color: oldlace;   
+}
+.display-panel{
+    background-color:lightsteelblue;
+    color: black;
+}
+textarea{
+    width: 75%;
+    height: 40px;
+    margin: 25px;
+    margin-bottom: 0px;
+}
+button{
+    margin: 10px 10px 75px 25px;
+    /* margin-bottom: 75px; */
+}
+#history{
+    margin: 25px;
+    margin-bottom: 100%;
+}
