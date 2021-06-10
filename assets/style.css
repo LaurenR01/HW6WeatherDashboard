@@ -1,7 +1,7 @@
 body{
     background-color: aliceblue;
 }
-h1{
+h1, h4{
     text-align: center;
 }
 
@@ -13,23 +13,33 @@ h1{
 }
 .input-panel{
     background-color:navy;
-    color: oldlace;   
+    color: oldlace;
+    height: 300px;   
 }
 .display-panel{
     background-color:lightsteelblue;
     color: black;
+    height:300px;
 }
-textarea{
+#zip-code{
     width: 75%;
-    height: 40px;
+    height: auto;
     margin: 25px;
     margin-bottom: 0px;
 }
 button{
-    margin: 10px 10px 75px 25px;
+    margin: 10px 10px 25px 25px;
     /* margin-bottom: 75px; */
 }
 #history{
     margin: 25px;
     margin-bottom: 100%;
+}
+.day{
+    width: 15%;
+    height: 150px;
+    margin: 10px;
+    padding: 10px;
+    background-color: navy;
+    display: inline;
 }
