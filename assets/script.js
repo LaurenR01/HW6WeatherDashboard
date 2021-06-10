@@ -15,6 +15,7 @@
             store = store+ 1;
         }
         getWeather(zipcode);
+        getForecast(zipcode);
     });
     
     // grabbing weather info from the API
@@ -35,6 +36,30 @@
             let highLow =  document.querySelector('.high-low');
             highLow.innerHTML = `${response.main.temp_max}°F / ${response.main.temp_min}°F`;
             let description = document.querySelector('.description');
-            description.innerText = response.weather[0].description;
+            description.innerText = capitalize(response.weather[0].description);
         }
-    // })
+    // capitalize descriptions
+    function capitalize(description){
+        const lower = description.toLowerCase();
+        return description.charAt(0).toUpperCase() + lower.slice(1);
+    }
+// grabbing forecast
+function getForecast(zipcode) {
+    fetch (`${api.base}forecast?zip=${zipcode}&units=imperial&appid=${api.key}`)
+    .then (response => {
+        return response.json();})
+    .then(showForecast);
+}
+  // show forecast on screen
+  function showForecast (response) {
+    console.log(response);
+    let day = ['one', 'two', 'three', 'four', 'five'];
+    for(i=0; i < 4; i++){
+        day = day + 1
+    let forecastTemp = document.querySelector('#' + day + '.temp');
+    forecastTemp.innerText = `${response.list[i].main.temp}°F`;
+    let highLow =  document.querySelector('#' + day + '.high-low');
+    highLow.innerHTML = `${response.list[i].main.temp_max}°F / ${response.list[i].main.temp_min}°F`;
+    let description = document.querySelector('#' + day +'.description');
+    description.innerText = capitalize(response.list[i].weather[i].main);
+}}

@@ -3,6 +3,7 @@ body{
 }
 h1, h4{
     text-align: center;
+    font-weight: bold;
 }
 
 #jumbotron{
@@ -42,4 +43,19 @@ button{
     padding: 10px;
     background-color: navy;
     display: inline;
+}
+.current-temp{
+    font-size: 175%;
+    font-weight: bold;
+    margin-top: 25px;
+}
+.location, .description{
+    font-size: 150%;
+}
+#current{
+    text-align: center;
+}
+.forecast{
+    color:white;
+    font-weight: bold;
 }
